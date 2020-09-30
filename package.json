@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-jwt": "^4.0.0",
+    "koa-router": "^9.4.0"
+  },
+  "name": "jwt",
+  "description": "jwt",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dezhizhang/jwt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dezhizhang/jwt/issues"
+  },
+  "homepage": "https://github.com/dezhizhang/jwt#readme"
+}
