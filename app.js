@@ -12,10 +12,22 @@ const app = new Koa();
 const router = new Router();
  
 router.get("/api/login",async(ctx,next) => {
-    ctx.body = {
-        code:200,
-        msg:'hello',
-        success:true
+    const user = ctx.request.query;
+    const { username } = user;
+    if(username) {
+        const token = sign({username},secret,{expiresIn:'10h'});
+        ctx.body = {
+            code:200,
+            msg:"成功",
+            token:token,
+            success:true
+        }
+    }else {
+        ctx.body = {
+            code:404,
+            msg:"传入参数有误",
+            success:false
+        }
     }
 });
 
