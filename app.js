@@ -30,6 +30,13 @@ router.get("/api/login",async(ctx,next) => {
         }
     }
 });
+router.get('/api/userInfo',jwt,async(ctx,next) => {
+    ctx.body = {
+        username:ctx.state.user.username,
+        code:200,
+    }
+});
+
 
 app.use(router.routes()).use(router.allowedMethods());
 app.listen(8082,() => {
